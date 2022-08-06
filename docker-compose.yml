@@ -1,0 +1,12 @@
+version: '3.*'
+services:
+  easly-logger:
+    container_name: dharmendrasha-easy-logger
+    build: .
+    ports:
+      - '9876:9229'
+      - '9877:3000'
+    volumes:
+      - .:/app
+    env_file:
+      - .env
